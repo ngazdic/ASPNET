@@ -20,12 +20,12 @@
     @foreach (var product in Model)
     {
         <tr>
-            <td>@product.ProductID</td>
-            <td>@product.Name</td>
-            <td>@product.Price</td>
-            <td>@product.CategoryID</td>
-            <td>@product.OnSale</td>
-            <td>@product.StockLevel</td>
+            <td><a href=/Product/ViewProduct/@product.ProductID>@product.ProductID</a></td>
+            <td><a href=/Product/ViewProduct/@product.ProductID>@product.Name</a></td>
+            <td><a href=/Product/ViewProduct/@product.ProductID>@product.Price</a></td>
+            <td><a href=/Product/ViewProduct/@product.ProductID>@product.CategoryID</a></td>
+            <td><a href=/Product/ViewProduct/@product.ProductID>@product.OnSale</a></td>
+            <td><a href=/Product/ViewProduct/@product.ProductID>@product.StockLevel</a></td>
         </tr>
     }
 

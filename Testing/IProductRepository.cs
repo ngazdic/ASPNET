@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Testing.Modles;
+using Testing.Models;
 
 namespace Testing
 {
@@ -8,6 +8,7 @@ namespace Testing
     {
 
         public IEnumerable<Product> GetAllProducts();
+        public Product GetProduct(int id);
     }
 
    

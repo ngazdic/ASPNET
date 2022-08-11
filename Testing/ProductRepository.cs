@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Testing.Modles;
+using Testing.Models;
 using System.Data;
-
+using Dapper;
 
 namespace Testing
 {
@@ -17,14 +17,16 @@ namespace Testing
 
         private readonly IDbConnection _conn;
 
-        public IEnumerable<Product> GetAllProducts()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public IEnumerable<Product> GetAllProducts()
         {
             return _conn.Query<Product>("SELECT * FROM PRODUCTS;");
+        }
+
+        public Product GetProduct(int id)
+        {
+            return _conn.QuerySingle<Product>("SELECT * FROM PRODUCTS WHERE PRODUCTID = @id", new { id = id });
         }
     }
 }
