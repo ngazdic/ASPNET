@@ -41,6 +41,8 @@ namespace Testing
             return View(prod);
         }
 
+        public void DeleteProduct(Product product);
+
     }
 
 
